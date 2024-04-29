@@ -1,10 +1,13 @@
 import {
   Arrow,
   Canvas,
+  ChatInput,
   ContentBlock,
   Footer,
   Heading,
   Marquee,
+  MarqueeLogos,
+  MarqueeProjects,
   NavBar,
   Section,
   Tag,
@@ -146,13 +149,18 @@ export default function Home() {
             </h2>
             <div className="pb-20">
               <p className="pt-12 text-brand-dark-500">I have worked for:</p>
-              <div className="absolute left-0">
-                <Marquee label="more passion more energy more footwork" />
+              <div className="absolute left-0 pt-4">
+                <MarqueeLogos label="more passion more energy more footwork" />
               </div>
 
-              <p className="pt-12 text-brand-dark-500 mt-24">
+              <p className="pt-4 pb-4 text-brand-dark-500 mt-24">
                 Selected projects:
               </p>
+              <div className="h-44">
+                <div className="absolute left-0 h-[200px] pt-4">
+                  <MarqueeProjects />
+                </div>
+              </div>
             </div>
           </ContentBlock>
           <div className="h-4" />
@@ -163,7 +171,7 @@ export default function Home() {
               </span>
               Key Skills
             </h2>
-            <p className="pt-12 text-brand-dark-500 mt-4">Technical:</p>
+            <p className="pt-8 text-brand-dark-500 mt-4">Technical:</p>
             <div className="flex flex-row flex-wrap mt-4 gap-4">
               {skills.map((skill) => (
                 <Tag key={skill}>{skill}</Tag>
@@ -174,6 +182,23 @@ export default function Home() {
               {personalSkills.map((skill) => (
                 <Tag key={skill}>{skill}</Tag>
               ))}
+            </div>
+          </ContentBlock>
+
+          <div className="h-4" />
+
+          <ContentBlock className="group">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
+              <span className="text-brand-600 group-hover:text-brand-300">
+                _{' '}
+              </span>
+              Ask me something
+            </h2>
+            <div className="relative mt-8">
+              <ChatInput
+                personaId={''}
+                welcomeMsg="Hey whats going on ask me something about my work experience"
+              />
             </div>
           </ContentBlock>
         </div>

@@ -12,11 +12,15 @@ import Canvas from './canvas';
 import ContentBlock from './content-block';
 import Tag from './tag';
 import ProjectCard from './project-card';
+import MarqueeLogos from './marquee-logos';
+import MarqueeProjects from './marquee-projects';
+import ChatInput from './chat-input';
 
 export {
   Arrow,
   Canvas,
   ContentBlock,
+  ChatInput,
   NavBar,
   NavMenu,
   Section,
@@ -24,6 +28,8 @@ export {
   ProjectCard,
   Logo,
   Marquee,
+  MarqueeLogos,
+  MarqueeProjects,
   Tag,
   ShortLogo,
   Footer,

@@ -48,7 +48,7 @@ export default function NavBar(props: IBuiltByProps) {
         </div>
         <div className="md:hidden pt-2 pb-2" onClick={onNavPress}>
           <Image
-            src={light ? '/images/nav-icon-dark.svg' : '/images/nav-icon.svg'}
+            src={'/images/nav-icon-dark.svg'}
             alt="nav menu"
             className=""
             width={24}
@@ -75,19 +75,19 @@ export default function NavBar(props: IBuiltByProps) {
           </div>
         ) : (
           <div className="hidden md:flex w-full items-center justify-end flex-row">
-            {/* <Link href="/who" className="pr-3">
-              <Button variant="outline" size="sm">
-                Who
-              </Button>
-            </Link> */}
-            <Link href="/work" className="pr-3">
+            <Link href="#work" className="pr-3">
               <Button variant="outline" size="sm">
                 Experience
               </Button>
             </Link>
-            <Link href="/services" className="pr-3">
+            <Link href="#services" className="pr-3">
               <Button variant="outline" size="sm">
                 Skills
+              </Button>
+            </Link>
+            <Link href="#ask" className="pr-3">
+              <Button variant="outline" size="sm">
+                Ask 🤖
               </Button>
             </Link>
             <Link href="/contact">
@@ -95,16 +95,16 @@ export default function NavBar(props: IBuiltByProps) {
                 size="sm"
                 className="flex flex-row justify-center items-center"
               >
-                <span className="font-semibold">Contact Me</span>{' '}
-                {/* <span className="pl-2">
+                <span className="">Contact Me</span>{' '}
+                <span className="pl-2">
                   <Image
                     priority
-                    src={'/images/arrow.svg'}
+                    src={'/images/arrow-dark.svg'}
                     width={16}
                     height={16}
                     alt="Call now"
                   />
-                </span> */}
+                </span>
               </Button>
             </Link>
           </div>

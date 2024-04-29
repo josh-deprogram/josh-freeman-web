@@ -15,6 +15,9 @@ html, body {
 
 @font-face {
   font-family: "TT Hoves Pro Variable";
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+
   src: url("/fonts/d8f1ebd7deab417ee3e09ff8b58799a1.eot");
   src: url("/fonts/d8f1ebd7deab417ee3e09ff8b58799a1.eot?#iefix")format("embedded-opentype"),
   url("/fonts/d8f1ebd7deab417ee3e09ff8b58799a1.woff2")format("woff2"),
@@ -25,6 +28,9 @@ html, body {
 
 @font-face {
   font-family: "TT Firs Neue Var Roman";
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+
   src: url("/fonts/5d142601b903c50f97692721f594aa0a.eot");
   src: url("/fonts/5d142601b903c50f97692721f594aa0a.eot?#iefix")format("embedded-opentype"),
   url("/fonts/5d142601b903c50f97692721f594aa0a.woff2")format("woff2"),

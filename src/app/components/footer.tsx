@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <Section className="relative bg-brand-dark-400 justify-end">
+    <Section className="relative bg-brand-dark-400 justify-end min-h-[50vh] ">
       <div className="px-4 md:px-12 text-lg md:text-2xl relative z-1">
         <ul>
           <li>{renderLink('mailto:info@deprogram.io', 'Email')}</li>

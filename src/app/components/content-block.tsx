@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 export default function ContentBlock(props: {
   children: React.ReactNode;
   className?: string;
@@ -9,5 +13,14 @@ export default function ContentBlock(props: {
 
   const combinedClasses = `${baseClasses} ${props.className}`;
 
-  return <div className={combinedClasses}>{props.children}</div>;
+  return (
+    <motion.div
+      initial={{ opacity: 0.6, translateY: 60 }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      viewport={{ once: false }}
+      className={combinedClasses}
+    >
+      {props.children}
+    </motion.div>
+  );
 }

@@ -23,11 +23,13 @@ const Button: React.FC<ReusableBtnProps> = ({ className = '', ...props }) => {
   border-brand-dark-300
 
   hover:border-brand-500
-  transition-colors ${
+  transition-colors 
+  ${
     size === 'md'
       ? 'font-bold text-xl h-16 px-8 w-60'
       : 'text-sm text-white h-8 px-4 w-26'
-  } rounded-md ${
+  } 
+  rounded-md ${
     variant === 'outline' || variant === 'outline-highlight' ? 'border-2' : ''
   } focus:outline-none focus:shadow-outline cursor-pointer relative  overflow-hidden  group flex justify-center items-center`;
 

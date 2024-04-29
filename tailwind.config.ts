@@ -29,6 +29,8 @@ const config: Config = {
         'spin-slow': 'spin 16s linear infinite',
         marquee: 'marquee 60s linear infinite',
         marquee2: 'marquee2 60s linear infinite',
+        marqueePrj: 'marqueePrj 45s linear infinite',
+        marqueePrj2: 'marqueePrj2 45s linear infinite',
       },
       keyframes: {
         marquee: {
@@ -37,6 +39,14 @@ const config: Config = {
         },
         marquee2: {
           '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        marqueePrj: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        marqueePrj2: {
+          '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
       },

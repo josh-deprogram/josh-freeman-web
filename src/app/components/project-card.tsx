@@ -15,8 +15,7 @@ export default function ProjectCard(props: {
  transition-shadow
  hover:bg-brand-100
  group
-  hover:md:shadow-[4px_4px_0px_0px_#f2ff41]
-  border border-brand-dark-200 hover:border-brand-300 relative`;
+  hover:md:shadow-[4px_4px_0px_0px_#f2ff41] relative`;
 
   const combinedClasses = `${baseClasses} ${props.className}`;
 
@@ -36,10 +35,7 @@ export default function ProjectCard(props: {
           className="max-w-[450px]"
         />
       </div>
-      {/* <p>
-        <span className="text-brand-600 group-hover:text-brand-300">_</span>{' '}
-        {title}
-      </p> */}
+      <p className="flex-start text-left text-sm pt-1">{title}</p>
     </div>
   );
 }

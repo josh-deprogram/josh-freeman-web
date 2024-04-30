@@ -66,7 +66,7 @@ export const MessageBubble = (props: IMessage) => {
           ${isHai && `max-w-[96%]`}
           ${isUser ? 'self-end' : 'self-start'}
           ${!isUser ? 'bg-brand-300' : 'bg-brand-100'}
-          rounded-2xl 
+          rounded-lg 
           text-brand-dark-500
           ${isHai && 'rounded-bl-none'} ${isUser && 'rounded-br-none'} 
           p-3 md:p-4`}

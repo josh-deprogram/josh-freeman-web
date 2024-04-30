@@ -54,7 +54,7 @@ export default function MarqueeLogos(props: IMarquee) {
 
   return (
     <>
-      <div className="relative flex overflow-x-hidden mt-[-48px]">
+      <div className="relative flex overflow-x-hidden mt-[-24px]">
         <div className="py-12 animate-marquee whitespace-nowrap flex flex-row">
           <Logos />
         </div>

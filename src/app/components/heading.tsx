@@ -1,3 +1,4 @@
+import Avalible from './avalible';
 interface IHeading {
   title: string;
   description: string;
@@ -16,6 +17,9 @@ export default function Heading(props: IHeading) {
       >
         {title}
       </h1>
+      <div>
+        <Avalible avalible />
+      </div>
     </div>
   );
 }

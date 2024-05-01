@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { colors } from '../config';
 
 export default function ContentBlock(props: {
   children: React.ReactNode;
@@ -15,8 +16,16 @@ export default function ContentBlock(props: {
 
   return (
     <motion.div
-      initial={{ opacity: 0.6, translateY: 60 }}
-      whileInView={{ opacity: 1, translateY: 0 }}
+      initial={{
+        opacity: 0.6,
+        translateY: 60,
+        backgroundColor: colors.brand[300],
+      }}
+      whileInView={{
+        opacity: 1,
+        translateY: 0,
+        backgroundColor: colors['brand-dark'][100],
+      }}
       viewport={{ once: false }}
       className={combinedClasses}
     >

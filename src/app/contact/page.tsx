@@ -2,19 +2,13 @@
 
 import {
   Arrow,
-  Avalible,
-  Canvas,
-  ChatInput,
   ContentBlock,
   Footer,
-  Heading,
   Marquee,
-  MarqueeLogos,
-  MarqueeProjects,
   NavBar,
   Section,
   Tag,
-} from './components';
+} from '../components';
 import Image from 'next/image';
 import { Element } from 'react-scroll';
 
@@ -41,6 +35,8 @@ export default function Home() {
     'WebGL',
     'WebXR',
     'Interactions',
+    'Stripe',
+    'API schemas',
   ];
 
   const personalSkills = [
@@ -59,7 +55,7 @@ export default function Home() {
     bg-brand-dark-200 w-full "
     >
       <div className="h-full">
-        <NavBar />
+        <NavBar subpage />
 
         <div
           className="w-screen h-screen relative 
@@ -67,17 +63,11 @@ export default function Home() {
         bg-gradient-to-b from-brand-dark-200
        flex-col flex justify-end"
         >
-          <div className="flex h-full justify-center items-center pt-28">
-            <Heading
-              title="Josh Freeman"
-              description="Well hello 👋, this is the hub of"
-            />
-          </div>
           <div>
-            <Element name="profile">
+            <Element name="contact">
               <div className="md:px-10 pr-36 md:pr-96 z-10 relative self-end">
                 <h1 className="text-2xl md:text-3xl lg:text-7xl text-brand-dark-950">
-                  Senior Interface developer across Mobile and Web.
+                  Contact me.
                 </h1>
               </div>
 
@@ -91,7 +81,7 @@ export default function Home() {
         </div>
 
         <Section className="items-start justify-start overflow-x-hidden">
-          <div className="mx-auto ">
+          <div className="mx-auto">
             <div className="group box-content">
               <div
                 className="absolute top-12
@@ -112,7 +102,7 @@ export default function Home() {
                   <span className="text-brand-600 group-hover:text-brand-300">
                     _{' '}
                   </span>
-                  Profile
+                  At The Garden Gate
                 </h2>
                 <div className="text-lg md:text-xl lg:text-xl text-brand-dark-950 pt-4">
                   Proficient in interface development, cross-platform mobile,
@@ -151,78 +141,6 @@ export default function Home() {
             </div>
 
             <div className="h-4" />
-
-            <Element name="experience">
-              <ContentBlock className="overflow-hidden group pb-4">
-                <h2 className="pt-2 md:pt-8 text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
-                  <span className="text-brand-600 group-hover:text-brand-300">
-                    _{' '}
-                  </span>
-                  Work Experience
-                </h2>
-
-                <div className="pb-24">
-                  <p className="pt-12 text-brand-dark-500">
-                    I have worked with:
-                  </p>
-                  <div className="absolute left-0 pt-4">
-                    <MarqueeLogos label="more passion more energy more footwork" />
-                  </div>
-
-                  <p className="pt-4 pb-4 text-brand-dark-500 mt-24">
-                    Selected projects:
-                  </p>
-                  <div className="h-44">
-                    <div className="absolute left-0 h-[200px] pt-4">
-                      <MarqueeProjects />
-                    </div>
-                  </div>
-                </div>
-              </ContentBlock>
-            </Element>
-            <div className="h-4" />
-
-            <Element name="skills">
-              <ContentBlock className="group">
-                <h2 className="text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
-                  <span className="text-brand-600 group-hover:text-brand-300">
-                    _{' '}
-                  </span>
-                  Key Skills
-                </h2>
-                <p className="pt-8 text-brand-dark-500 mt-4">Technical:</p>
-                <div className="flex flex-row flex-wrap mt-4 gap-4">
-                  {skills.map((skill) => (
-                    <Tag key={skill}>{skill}</Tag>
-                  ))}
-                </div>
-                <p className="pt-8 text-brand-dark-500">Personal:</p>
-                <div className="flex flex-row flex-wrap mt-4 gap-4">
-                  {personalSkills.map((skill) => (
-                    <Tag key={skill}>{skill}</Tag>
-                  ))}
-                </div>
-              </ContentBlock>
-            </Element>
-
-            <div className="h-4" />
-
-            <Element name="ask">
-              <ContentBlock className="group">
-                <h2 className="text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
-                  <span className="text-brand-600 group-hover:text-brand-300">
-                    _{' '}
-                  </span>
-                  Ask my assistant
-                </h2>
-                <div className="relative mt-8 w-full">
-                  <ChatInput
-                    personaId={'asst_AX9LyuTjONDaBWZEQdzTbr0H'}
-                    welcomeMsg="Hey whats going on ask me something about my work experience"
-                  />
-                </div>
-              </ContentBlock>
-            </Element>
           </div>
         </Section>
 

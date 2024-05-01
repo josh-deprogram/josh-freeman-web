@@ -15,9 +15,11 @@ import ProjectCard from './project-card';
 import MarqueeLogos from './marquee-logos';
 import MarqueeProjects from './marquee-projects';
 import ChatInput from './chat-input';
+import Avalible from './avalible';
 
 export {
   Arrow,
+  Avalible,
   Canvas,
   ContentBlock,
   ChatInput,

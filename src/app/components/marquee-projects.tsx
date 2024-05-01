@@ -10,19 +10,39 @@ export default function MarqueeProjects(props: IMarquee) {
   const Logos = () => (
     <>
       <div className={prjMargue}>
-        <ProjectCard title="deprogram" description="deprogram" />
+        <ProjectCard
+          title="At The Garden Gate"
+          description="deprogram"
+          url="atgg"
+        />
       </div>
       <div className={prjMargue}>
-        <ProjectCard title="deprogram" description="deprogram" />
+        <ProjectCard
+          title="At The Garden Gate"
+          description="deprogram"
+          url="atgg"
+        />
       </div>
       <div className={prjMargue}>
-        <ProjectCard title="deprogram" description="deprogram" />
+        <ProjectCard
+          title="At The Garden Gate"
+          description="deprogram"
+          url="atgg"
+        />
       </div>
       <div className={prjMargue}>
-        <ProjectCard title="deprogram" description="deprogram" />
+        <ProjectCard
+          title="At The Garden Gate"
+          description="deprogram"
+          url="atgg"
+        />
       </div>
       <div className={prjMargue}>
-        <ProjectCard title="deprogram" description="deprogram" />
+        <ProjectCard
+          title="At The Garden Gate"
+          description="deprogram"
+          url="atgg"
+        />
       </div>
     </>
   );

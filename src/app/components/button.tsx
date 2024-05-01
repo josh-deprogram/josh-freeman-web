@@ -31,7 +31,7 @@ const Button: React.FC<ReusableBtnProps> = ({ className = '', ...props }) => {
   } 
   rounded-md ${
     variant === 'outline' || variant === 'outline-highlight' ? 'border-2' : ''
-  } focus:outline-none focus:shadow-outline cursor-pointer relative  overflow-hidden  group flex justify-center items-center`;
+  } focus:outline-none focus:shadow-outline cursor-pointer relative  overflow-hidden  group/button flex justify-center items-center`;
 
   const combinedClasses = `${baseClasses} ${className}`;
 
@@ -39,7 +39,7 @@ const Button: React.FC<ReusableBtnProps> = ({ className = '', ...props }) => {
     <button className={combinedClasses} {...props}>
       <span
         className="TTFirsFont font-normal flex flex-row justify-center items-center
-         group-hover:translate-x-32 transition-transform duration-300 ease-in-out
+         group-hover/button:translate-x-32 transition-transform duration-300 ease-in-out
          text-brand-dark-500
       "
       >
@@ -48,7 +48,7 @@ const Button: React.FC<ReusableBtnProps> = ({ className = '', ...props }) => {
       <span
         className="TTFirsFont text-brand-500 font-normal flex flex-row justify-center items-center
           translate-x-[-150%]
-         group-hover:translate-x-0 transition-transform duration-300 ease-in-out
+          group-hover/button:translate-x-0 transition-transform duration-300 ease-in-out
          absolute
       "
       >

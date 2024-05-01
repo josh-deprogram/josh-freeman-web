@@ -6,6 +6,7 @@ import { colors } from '../config';
 export default function ContentBlock(props: {
   children: React.ReactNode;
   className?: string;
+  showOnce?: boolean;
 }) {
   const baseClasses = `flex flex-col justify-center items-start px-4 md:px-12
   bg-brand-dark-100 
@@ -17,16 +18,17 @@ export default function ContentBlock(props: {
   return (
     <motion.div
       initial={{
-        opacity: 0.6,
-        translateY: 60,
+        opacity: 0,
+        scaleY: 0.6,
         backgroundColor: colors.brand[300],
       }}
       whileInView={{
         opacity: 1,
+        scaleY: 1,
         translateY: 0,
         backgroundColor: colors['brand-dark'][100],
       }}
-      viewport={{ once: false }}
+      viewport={{ once: props.showOnce || false }}
       className={combinedClasses}
     >
       {props.children}

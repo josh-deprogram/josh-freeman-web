@@ -16,6 +16,7 @@ import MarqueeLogos from './marquee-logos';
 import MarqueeProjects from './marquee-projects';
 import ChatInput from './chat-input';
 import Avalible from './avalible';
+import TextAni from './text-ani';
 
 export {
   Arrow,
@@ -29,6 +30,7 @@ export {
   Button,
   ProjectCard,
   Logo,
+  TextAni,
   Marquee,
   MarqueeLogos,
   MarqueeProjects,

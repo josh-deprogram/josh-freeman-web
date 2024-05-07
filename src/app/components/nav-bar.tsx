@@ -59,7 +59,12 @@ export default function NavBar(props: IBuiltByProps) {
               </Button>
             </NextLink>
           ) : (
-            <Link to="profile" offset={-150} duration={scrollOptions.duration}>
+            <Link
+              to="profile"
+              offset={-150}
+              onClick={() => onClose(true)}
+              duration={scrollOptions.duration}
+            >
               <Logo />
             </Link>
           )}

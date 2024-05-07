@@ -13,7 +13,7 @@ import {
 import Image from 'next/image';
 import { Element } from 'react-scroll';
 
-export default function Home() {
+export default function Project() {
   const skills = [
     'React Native',
     'TypeScript',
@@ -48,11 +48,10 @@ export default function Home() {
        flex-col flex justify-end"
       >
         <div>
-          <Element name="profile">
+          <Element name="project">
             <div className="md:px-10 pr-36 md:pr-96 z-10 relative self-end">
               <h1 className="text-2xl md:text-3xl lg:text-7xl text-brand-dark-950">
-                Design + Development of mobile apps and web site with payment
-                gateways.
+                Development of mobile apps and web site with payment gateways.
               </h1>
             </div>
 
@@ -76,10 +75,10 @@ export default function Home() {
               group-hover:shadow-[-16px_16px_0px_0px_#f2ff41] group-hover:md:shadow-[16px_16px_0px_0px_#f2ff41]"
             >
               <Image
-                src="/images/me-avatar-large.jpg"
-                alt="Josh Freeman"
+                src="/images/projects/thumbs/atgg-logo-1024.png"
+                alt="At The Garden Gate"
                 width={430}
-                height={400}
+                height={430}
               />
             </div>
             <ContentBlock className="mt-[400px]">
@@ -114,7 +113,7 @@ export default function Home() {
               <Button
                 size="sm"
                 variant="outline"
-                className="flex flex-row text-sm justify-center items-center"
+                className="flex flex-row text-sm justify-center items-center mt-4"
               >
                 Visit Project
                 <Image

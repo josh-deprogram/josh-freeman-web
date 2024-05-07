@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Logo from './logo';
 interface INavProps {
@@ -50,40 +50,45 @@ export default function NavMenu(props: INavProps) {
   const variants = {
     open: { opacity: 1, x: '-100%' },
     closed: { opacity: 1, x: '0%' },
-    // txtOpen: { opacity: 1, x: '0%' },
-    // txtClosed: { opacity: 0.7, x: '100%' },
+    txtOpen: { opacity: 1, x: -2 },
+    txtClosed: { opacity: 0, x: 50 },
     // bgOpen: { opacity: 1, x: '0%' },
     // bgClosed: { x: '100%' },
   };
 
   return (
-    <motion.div
-      animate={menuVisible ? 'open' : 'closed'}
-      variants={variants}
-      transition={{ ease: 'easeOut', duration: 0.25 }}
-      className={`md:hidden top-[0px] fixed left-[100%] w-full h-screen overflow-x-hidden z-20 ${
-        menuVisible ? 'pointer-events-auto' : 'pointer-events-none'
-      }`}
-    >
-      <div className="md:hidden top-0 left-0 w-full h-full">
-        <motion.div
-          animate={menuVisible ? 'bgOpen' : 'bgClosed'}
-          variants={variants}
-          className="bg-brand-600 w-full h-full absolute z-100 opacity-100"
-        />
-        <div
-          className="w-full h-full absolute z-40 opacity-100
+    <AnimatePresence>
+      <motion.div
+        animate={menuVisible ? 'open' : 'closed'}
+        exit={{ opacity: 1, x: '0%' }}
+        variants={variants}
+        transition={{ ease: 'easeOut', duration: 0.25 }}
+        className={`md:hidden top-[0px] fixed left-[100%] w-full h-screen overflow-x-hidden z-20 ${
+          menuVisible ? 'pointer-events-auto' : 'pointer-events-none'
+        }`}
+      >
+        <div className="md:hidden top-0 left-0 w-full h-full">
+          <motion.div
+            animate={menuVisible ? 'bgOpen' : 'bgClosed'}
+            variants={variants}
+            className="bg-brand-600 w-full h-full absolute z-100 opacity-100"
+          />
+          <div
+            className="w-full h-full absolute z-40 opacity-100
                 p-4 md:p-24
                 flex flex-col flex-1 justify-start items-center"
-        >
-          {menuVisible && (
+          >
             <div className="flex flex-col flex-1 w-full h-full items-start justify-start pt-20">
               {links.map((link, i) => (
                 <motion.div
                   key={link.title}
-                  animate={menuVisible ? 'txtOpen' : 'txtClose'}
+                  animate={menuVisible ? 'txtOpen' : 'txtClosed'}
                   variants={variants}
-                  transition={{ ease: 'easeOut', delay: i * 200 }}
+                  transition={{
+                    ease: 'linear',
+                    delay: 0.2 + i * 0.1,
+                    duration: 0.1,
+                  }}
                 >
                   {link.url === '/contact' ? (
                     <NextLink
@@ -113,9 +118,9 @@ export default function NavMenu(props: INavProps) {
                 </motion.div>
               ))}
             </div>
-          )}
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 }

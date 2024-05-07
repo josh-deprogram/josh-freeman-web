@@ -14,6 +14,7 @@ import {
   NavBar,
   Section,
   Tag,
+  TextAni,
 } from './components';
 import Image from 'next/image';
 import { Element } from 'react-scroll';
@@ -80,10 +81,16 @@ export default function Home() {
         </div>
         <div>
           <Element name="profile">
-            <div className="md:px-10 pr-36 md:pr-96 z-10 relative self-end">
-              <h1 className="text-2xl md:text-3xl lg:text-7xl text-brand-dark-950">
-                Senior Interface developer across Mobile and Web.
-              </h1>
+            <div className="md:px-10 pr-36 md:pr-86 z-10 relative self-end">
+              <TextAni className="text-2xl md:text-3xl lg:text-7xl text-brand-dark-950">
+                Senior Interface developer{' '}
+              </TextAni>
+              <TextAni
+                delay={0.3}
+                className="text-2xl md:text-3xl lg:text-7xl text-brand-dark-950"
+              >
+                across Mobile and Web.
+              </TextAni>
             </div>
 
             <div>
@@ -113,12 +120,12 @@ export default function Home() {
               />
             </div>
             <ContentBlock className="mt-[400px]">
-              <h2 className="text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
+              <TextAni className="text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
                 <span className="text-brand-600 group-hover:text-brand-300">
                   _{' '}
                 </span>
                 Profile
-              </h2>
+              </TextAni>
               <div className="text-lg md:text-xl lg:text-xl text-brand-dark-950 pt-4">
                 Proficient in interface development, cross-platform mobile,
                 mobile architecture, and implementing seamless UI/UX experiences
@@ -158,13 +165,13 @@ export default function Home() {
           <div className="h-4" />
 
           <Element name="experience">
-            <ContentBlock className="overflow-hidden group pb-4">
-              <h2 className="pt-2 md:pt-8 text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
+            <ContentBlock className="overflow-hidden group pb-10 ">
+              <TextAni className="pt-2  text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
                 <span className="text-brand-600 group-hover:text-brand-300">
                   _{' '}
                 </span>
                 Work Experience
-              </h2>
+              </TextAni>
 
               <div className="pb-24">
                 <p className="pt-12 text-brand-dark-500">I have worked with:</p>
@@ -187,12 +194,12 @@ export default function Home() {
 
           <Element name="skills">
             <ContentBlock className="group">
-              <h2 className="text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
+              <TextAni className="text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
                 <span className="text-brand-600 group-hover:text-brand-300">
                   _{' '}
                 </span>
                 Key Skills
-              </h2>
+              </TextAni>
               <p className="pt-8 text-brand-800 mt-4">Technical:</p>
               <div className="flex flex-row flex-wrap mt-4 gap-4">
                 {skills.map((skill) => (
@@ -218,12 +225,12 @@ export default function Home() {
 
           <Element name="ask">
             <ContentBlock className="group">
-              <h2 className="text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
+              <TextAni className="text-2xl md:text-3xl lg:text-5xl text-left text-brand-dark-950">
                 <span className="text-brand-600 group-hover:text-brand-300">
                   _{' '}
                 </span>
                 Ask my assistant
-              </h2>
+              </TextAni>
               <div className="relative mt-8 w-full">
                 <ChatInput
                   personaId={'asst_AX9LyuTjONDaBWZEQdzTbr0H'}
